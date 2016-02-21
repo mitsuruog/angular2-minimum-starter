@@ -5,7 +5,9 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
+    "http-server": "http-server",
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "start-heroku": "concurrent \"npm run tsc\" \"npm run http-server\" "
   },
   "license": "MIT",
   "dependencies": {
@@ -20,8 +22,10 @@
     "zone.js": "0.5.15"
   },
   "devDependencies": {
-    "concurrently": "^1.0.0",
+    "concurrently": "^2.0.0",
+    "http-server": "^0.9.0",
     "lite-server": "^2.0.1",
+    "tsd": "^0.6.5",
     "typescript": "^1.7.5"
   }
 }
