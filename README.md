@@ -1,4 +1,4 @@
-# angular2-minimum-starter [![Dependency Status](https://gemnasium.com/mitsuruog/.svg)](https://gemnasium.com/mitsuruog/)
+# angular2-minimum-starter [![Dependency Status](https://gemnasium.com/mitsuruog/angular2-minimum-starter.svg)](https://gemnasium.com/mitsuruog/angular2-minimum-starter)
 
 Minimum starter kit for angular2
 
