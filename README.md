@@ -24,6 +24,8 @@ Base on official 5min quick start.
 - [x] Minimun configure TypeScript
 - [x] Minimun configure Visual Studio Code
 - [x] Minimun development HTTP Server
+- [ ] Minimun Javascript intellisense via typings 
+- [ ] Minimun test seed and coverage 
 - [x] Module loader via SystemJS
 - [x] Easy to deploy on Heroku
 
