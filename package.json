@@ -6,6 +6,7 @@
     "tsc:w": "tsc -w",
     "lite": "lite-server",
     "http-server": "http-server",
+    "test": "karma start karma.conf.js",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
     "start-heroku": "concurrent \"npm run tsc\" \"npm run http-server\" "
   },
@@ -24,6 +25,11 @@
   "devDependencies": {
     "concurrently": "^2.0.0",
     "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.7",
+    "karma-mocha-reporter": "^2.0.0",
     "lite-server": "^2.0.1",
     "typescript": "^1.7.5",
     "typings": "^0.6.8"
