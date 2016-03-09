@@ -3,9 +3,8 @@ import {Logger} from './common/services/logger.service';
 
 @Component({
   selector: 'my-app',
-  template: `
-    <h1>Angular2 Minimum Starter Kit</h1>
-  `,
+  templateUrl: 'app/app.html',
+  styleUrls: ['app/app.css'],
   providers: [Logger]
 })
 

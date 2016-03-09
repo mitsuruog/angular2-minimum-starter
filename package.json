@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "angular2": "2.0.0-beta.7",
+    "bootstrap": "^3.3.6",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "eslint": "^2.3.0",

@@ -29,6 +29,7 @@ Base on official 5min quick start.
 - [ ] Minimun test seed and coverage 
 - [x] Module loader via SystemJS
 - [x] Easy to deploy on Heroku
+- [x] Bootstrap template
 
 ## Notice deploy to Heroku
 
