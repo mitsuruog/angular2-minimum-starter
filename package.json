@@ -7,6 +7,7 @@
     "lite": "lite-server",
     "http-server": "http-server",
     "test": "karma start karma.conf.js",
+    "coverage": "node_modules/.bin/remap-istanbul -i report/coverage/coverage-final.json -o report/coverage/ -t html",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
     "start-heroku": "concurrent \"npm run tsc\" \"npm run http-server\" "
   },
@@ -29,11 +30,13 @@
     "concurrently": "^2.0.0",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
-    "karma": "^0.13.21",
+    "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.5",
     "karma-jasmine": "^0.3.7",
     "karma-mocha-reporter": "^2.0.0",
     "lite-server": "^2.0.1",
+    "remap-istanbul": "^0.5.1",
     "typescript": "^1.7.5",
     "typings": "^0.6.8"
   }

@@ -31,6 +31,12 @@ Base on official 5min quick start.
 - [x] Easy to deploy on Heroku
 - [x] Bootstrap template
 
+## Tasks
+
+- `npm start` to fire up dev server.
+- `npm test` to run unit test.
+- `npm run coverage` to build a HTML coverage report.
+
 ## Notice deploy to Heroku
 
 When deploy to Heroku, please carefully read important notice as below.
