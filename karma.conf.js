@@ -12,7 +12,7 @@ let baseLibs = [
   'node_modules/angular2/bundles/http.dev.js'
 ];
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -29,7 +29,12 @@ module.exports = function (config) {
       ...baseLibs,
       'node_modules/angular2/bundles/testing.dev.js',
       'karma.shim.js',
-      { pattern: 'app/**/*.js', included: false }
+      { pattern: 'app/**/*.js', included: false },
+      { pattern: 'app/**/*.js', included: false },
+      { pattern: 'app/**/*.html', included: false, watched: true },
+      { pattern: 'app/**/*.css', included: false, watched: true },
+      { pattern: 'app/**/*.ts', included: false, watched: false },
+      { pattern: 'app/**/*.js.map', included: false, watched: false }
     ],
 
     // list of files to exclude
@@ -37,10 +42,10 @@ module.exports = function (config) {
     ],
 
     // proxied base paths
-    // proxies: {
-    //   // required for component assests fetched by Angular's compiler
-    //   "/app/": "/base/app/"
-    // },
+    proxies: {
+      // required for component assests fetched by Angular's compiler
+      "/app/": "/base/app/"
+    },
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -49,14 +54,14 @@ module.exports = function (config) {
     },
 
     coverageReporter: {
-      dir : 'report/coverage/',
-      reporters: [{ 
-        type: 'json', 
-        subdir : '.',
-        file : 'coverage-final.json',
+      dir: 'report/coverage/',
+      reporters: [{
+        type: 'json',
+        subdir: '.',
+        file: 'coverage-final.json',
       }]
     },
-    
+
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter

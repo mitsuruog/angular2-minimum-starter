@@ -1,12 +1,18 @@
 import {
-it,
-inject,
-injectAsync,
-beforeEachProviders,
-TestComponentBuilder
+  describe,
+  it,
+  inject,
+  injectAsync,
+  expect,
+  beforeEach,
+  beforeEachProviders,
+  TestComponentBuilder
 } from 'angular2/testing';
 
-import {Component, provide} from 'angular2/core';
+import {Component, View, provide} from 'angular2/core';
+import {Http, BaseRequestOptions, Response, ResponseOptions} from 'angular2/http';
+import {DOM} from 'angular2/src/platform/dom/dom_adapter';
+import {MockBackend, MockConnection} from 'angular2/http/testing';
 
 import {Logger} from './common/services/logger.service';
 import {AppComponent} from './app.component';
