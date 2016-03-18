@@ -9,7 +9,8 @@
     "test": "karma start karma.conf.js",
     "coverage": "node_modules/.bin/remap-istanbul -i report/coverage/coverage-final.json -o report/coverage/ -t html",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
-    "start-heroku": "concurrent \"npm run tsc\" \"npm run http-server\" "
+    "start-heroku": "concurrent \"npm run tsc\" \"npm run http-server\" ",
+    "postinstall": "typings install"
   },
   "license": "MIT",
   "dependencies": {
