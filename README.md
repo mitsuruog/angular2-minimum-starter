@@ -8,8 +8,8 @@ Minimum starter kit for angular2
  git clone --depth 1 https://github.com/mitsuruog/angular2-minimum-starter.git
  cd angular2-minimum-starter
  npm install 
- npm run start
- npm run test
+ npm start
+ npm test
  ```
 
 ## Demo
@@ -19,7 +19,7 @@ https://angular2-minimum-starter.herokuapp.com/
 ## Features
 
 Base on official 5min quick start.  
-[NOTICE] Development only. Don't use for productuon.
+:warning: [NOTICE] **Development only. Don't use for productuon.**
  
 - [x] Minimun Angular2 dependencies
 - [x] Minimun configure TypeScript
