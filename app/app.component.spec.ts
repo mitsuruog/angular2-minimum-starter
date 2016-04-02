@@ -9,7 +9,7 @@ import {
   TestComponentBuilder
 } from 'angular2/testing';
 
-import {Component, View, provide} from 'angular2/core';
+import {Component, provide} from 'angular2/core';
 import {Http, BaseRequestOptions, Response, ResponseOptions} from 'angular2/http';
 import {DOM} from 'angular2/src/platform/dom/dom_adapter';
 import {MockBackend, MockConnection} from 'angular2/http/testing';
