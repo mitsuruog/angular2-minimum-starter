@@ -1,5 +1,5 @@
-import {Component, OnInit} from 'angular2/core';
-import {Logger} from './common/services/logger.service';
+import { Component } from '@angular/core';
+import { Logger } from './common/services/logger.service';
 
 @Component({
   selector: 'my-app',
@@ -10,7 +10,8 @@ import {Logger} from './common/services/logger.service';
 
 export class AppComponent {
 
-  constructor(private logger: Logger) { }
+  constructor(private logger:Logger) {
+  }
 
   ngOnInit() {
     this.logger.log('Alo!! Alo!!');

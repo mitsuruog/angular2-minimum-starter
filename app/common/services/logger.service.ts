@@ -1,17 +1,20 @@
-import {Injectable} from 'angular2/core';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Logger {
 
-  constructor() { }
+  constructor() {
+  }
 
-  log(message: any) {
+  log(message:any) {
     console.log(message);
   }
-  error(message: any) {
+
+  error(message:any) {
     console.error(message);
   }
-  warn(message: any) {
+
+  warn(message:any) {
     console.warn(message);
   }
 
