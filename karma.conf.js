@@ -1,18 +1,6 @@
 'use strict';
-// Karma configuration
 
-let baseLibs = [
-  'node_modules/systemjs/dist/system-polyfills.js',
-  'node_modules/systemjs/dist/system.js',
-  'node_modules/es6-shim/es6-shim.js',
-  'node_modules/rxjs/bundles/Rx.js',
-  'node_modules/angular2/bundles/angular2-polyfills.js',
-  'node_modules/angular2/bundles/angular2.dev.js',
-  'node_modules/angular2/bundles/router.dev.js',
-  'node_modules/angular2/bundles/http.dev.js'
-];
-
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -26,20 +14,49 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      ...baseLibs,
-      'node_modules/angular2/bundles/testing.dev.js',
-      'karma.shim.js',
-      { pattern: 'app/**/*.js', included: false },
-      { pattern: 'app/**/*.js', included: false },
-      { pattern: 'app/**/*.html', included: false, watched: true },
-      { pattern: 'app/**/*.css', included: false, watched: true },
-      { pattern: 'app/**/*.ts', included: false, watched: false },
-      { pattern: 'app/**/*.js.map', included: false, watched: false }
+      // Polyfills.
+      'node_modules/es6-shim/es6-shim.js',
+
+      'node_modules/reflect-metadata/Reflect.js',
+
+      // System.js for module loading
+      'node_modules/systemjs/dist/system-polyfills.js',
+      'node_modules/systemjs/dist/system.src.js',
+
+      // Zone.js dependencies
+      'node_modules/zone.js/dist/zone.js',
+      'node_modules/zone.js/dist/jasmine-patch.js',
+      'node_modules/zone.js/dist/sync-test.js',
+      'node_modules/zone.js/dist/async-test.js',
+      'node_modules/zone.js/dist/fake-async-test.js',
+
+      // RxJs.
+      { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false },
+      { pattern: 'node_modules/rxjs/**/*.js.map', included: false, watched: false },
+
+
+      {pattern: 'karma-test.shim.js', included: true, watched: true},
+
+      // paths loaded via module imports
+      // Angular itself
+      {pattern: 'node_modules/@angular/**/*.js', included: false, watched: true},
+      {pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: true},
+
+      // Our built application code
+      {pattern: 'app/**/*.js', included: false, watched: true},
+
+      // paths loaded via Angular's component compiler
+      // (these paths need to be rewritten, see proxies section)
+      {pattern: 'app/**/*.html', included: false, watched: true},
+      {pattern: 'app/**/*.css', included: false, watched: true},
+
+      // paths to support debugging with source maps in dev tools
+      {pattern: 'app/**/*.ts', included: false, watched: false},
+      {pattern: 'app/**/*.js.map', included: false, watched: false}
     ],
 
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
     // proxied base paths
     proxies: {
