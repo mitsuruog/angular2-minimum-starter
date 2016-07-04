@@ -3,7 +3,7 @@ import {
   it,
   inject,
   expect,
-  beforeEachProviders,
+  addProviders
 } from '@angular/core/testing';
 
 import {Logger} from './common/services/logger.service';
@@ -11,10 +11,9 @@ import {AppComponent} from './app.component';
 
 describe('Test: AppComponent', () => {
 
-  beforeEachProviders(() => [
-    AppComponent,
-    Logger
-  ]);
+  beforeEach(() => {
+    addProviders([AppComponent, Logger]);
+  });
 
   it('AppComponentが存在すること', inject([AppComponent, Logger], (testee:AppComponent) => {
     expect(testee).toBeDefined();
